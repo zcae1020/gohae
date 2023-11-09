@@ -1,11 +1,9 @@
 import { Card } from "@mui/material";
 import Link from "next/link";
 
-import style from "./page.module.scss";
-
 const Home = () => {
   return (
-    <div className={style.wrapper}>
+    <div>
       <Card>
         <Link href="/dashboard">마이 페이지</Link>
       </Card>

@@ -1,24 +1,28 @@
-import { Card } from "@mui/material";
-import Link from "next/link";
+"use client";
+
+import React, { useState } from "react";
+
+import { Button, Card, CardContent, Input, List } from "@mui/material";
 
 const Home = () => {
+  const [value, setValue] = useState("");
+
   return (
     <div>
       <Card>
-        <Link href="/dashboard">마이 페이지</Link>
+        <CardContent>
+          <Button>보낸 편지함</Button>
+        </CardContent>
+        <CardContent>
+          <Button>받은 편지함</Button>
+        </CardContent>
       </Card>
-      <Card>
-        <Link href="/letterbox">편지함</Link>
-      </Card>
-      <Card>
-        <Link href="/write">편지쓰기</Link>
-      </Card>
-      <Card>
-        <Link href="/letterbox">상점</Link>
-      </Card>
-      <Card>
-        <Link href="/letterbox">더보기</Link>
-      </Card>
+      <List>
+        <li>편지 1</li>
+        <li>편지 2</li>
+        <li>편지 3</li>
+      </List>
+      <Input value={value} onChange={(e) => setValue(e.currentTarget.value)} />
     </div>
   );
 };

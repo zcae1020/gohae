@@ -10,7 +10,7 @@ const Home = () => {
   const [value, setValue] = useState("");
 
   const onClick = () => {
-    addDoc(collection(firestore, "users"), {
+    addDoc(collection(firestore, "letters"), {
       name: value,
     });
     setValue("");

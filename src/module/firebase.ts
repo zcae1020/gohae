@@ -17,8 +17,3 @@ export const app = initializeApp(firebaseConfig);
 export const firestore = getFirestore(app);
 
 export const auth = getAuth(app);
-
-export const signInGoogle = () => {
-  const provider = new GoogleAuthProvider();
-  return signInWithRedirect(auth, provider);
-};

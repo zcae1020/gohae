@@ -1,11 +1,9 @@
-import { Inter } from "next/font/google";
-
 import BottomNav from "@/component/BottomNav";
 import { navigationData } from "@/constant/nav";
 
 import type { Metadata } from "next";
 
-const inter = Inter({ subsets: ["latin"] });
+import style from "./page.module.scss";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -19,7 +17,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
+      <body className={style.layout_body}>
         {children}
         <BottomNav navigationData={navigationData} />
       </body>

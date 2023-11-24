@@ -1,3 +1,6 @@
+import BottomNav from "@/component/BottomNav";
+import { navigationData } from "@/constant/nav";
+
 import type { Metadata } from "next";
 
 import style from "./page.module.scss";
@@ -14,7 +17,10 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en">
-            <body className={style.layout_body}>{children}</body>
+            <body className={style.layout_body}>
+                {children}
+                <BottomNav navigationData={navigationData} />
+            </body>
         </html>
     );
 }

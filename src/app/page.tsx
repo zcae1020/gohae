@@ -8,10 +8,6 @@ import { auth } from "@/module/firebase";
 import Image from "next/image";
 
 const Home = () => {
-    useEffect(() => {
-        console.log("auth.currentUser", auth.currentUser);
-    }, []);
-
     return (
         <div>
             <Image
